@@ -3,6 +3,8 @@ package com.iotarch.stockkotlinapp
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
@@ -21,6 +23,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
+        val recyclerView = findViewById<RecyclerView>(R.id.stockRecycler)
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+
 
         fab.setOnClickListener { view ->
 
@@ -44,6 +52,15 @@ class MainActivity : AppCompatActivity() {
                         Log.d("MainActivity",stock.證券名稱)
                     }
 
+
+
+
+                    runOnUiThread(){
+
+                        recyclerView.adapter = StockRecycleViewAdpter(stocks)
+                        recyclerView.adapter.notifyDataSetChanged()
+
+                    }
 
 
                 }
