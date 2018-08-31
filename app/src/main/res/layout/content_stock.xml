@@ -20,11 +20,11 @@
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="8dp"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintBaseline_toBaselineOf="@+id/codeTV"
-        app:layout_constraintStart_toEndOf="@+id/codeTV" />
+        app:layout_constraintStart_toStartOf="@+id/guideline4" />
 
     <TextView
         android:id="@+id/priceTV"
@@ -36,27 +36,21 @@
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/nameTV"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline"
+        android:id="@+id/guideline4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="100dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/guideline5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.61" />
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="20dp" />
 </android.support.constraint.ConstraintLayout>

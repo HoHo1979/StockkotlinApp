@@ -51,9 +51,7 @@ class MainActivity : AppCompatActivity() {
 
                         Log.d("MainActivity",stock.證券名稱)
                     }
-
-
-
+                    
 
                     runOnUiThread(){
 
