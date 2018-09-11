@@ -1,17 +1,18 @@
 package com.iotarch.stockkotlinapp
 
-import android.content.Context
 import android.support.v7.widget.RecyclerView
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.iotarch.stockkotlinapp.model.StockData
 
 
-class StockRecycleViewAdpter(val stocks: List<StockData>):RecyclerView.Adapter<StockRecycleViewAdpter.StockRecyclerHolder> (){
+class StockRecycleViewAdpter(val stocks: ArrayList<StockData>):RecyclerView.Adapter<StockRecycleViewAdpter.StockRecyclerHolder> (){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StockRecyclerHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.content_stock,parent,false)
-        return StockRecyclerHolder(view)
+
+        return StockRecyclerHolder(ViewGroup.inflate(parent.context,R.layout.content_stock,parent))
+//        val view = LayoutInflater.from(parent.context).inflate(R.layout.content_stock,parent,false)
+//        return StockRecyclerHolder(view)
     }
 
     override fun getItemCount(): Int {
